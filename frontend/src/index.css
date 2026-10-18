@@ -1,0 +1,153 @@
+:root {
+  /* Dynamic Theme Accents (Default: Royal Indigo) */
+  --primary: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-dark: #3730a3;
+  --primary-glow: rgba(79, 70, 229, 0.18);
+  --primary-glow-lg: rgba(79, 70, 229, 0.08);
+  --grad-primary: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%);
+  --grad-accent: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+
+  /* Surface & Background Depths (Modern Clean Light Mode) */
+  --bg-darkest: #f8fafc;
+  --bg-base: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-heavy: rgba(255, 255, 255, 0.95);
+  --bg-hover: rgba(15, 23, 42, 0.04);
+  --bg-active: rgba(15, 23, 42, 0.07);
+
+  /* Border & Inset Highlights */
+  --border-faint: rgba(226, 232, 240, 0.7);
+  --border-subtle: #e2e8f0;
+  --border-glow: rgba(79, 70, 229, 0.35);
+  --inset-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+
+  /* Typography Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+
+  /* Agent Role Colors (Tuned for Crisp Light Contrast) */
+  --cyan: #0284c7;
+  --cyan-glow: rgba(2, 132, 199, 0.15);
+  --emerald: #059669;
+  --emerald-glow: rgba(5, 150, 105, 0.15);
+  --amber: #d97706;
+  --amber-glow: rgba(217, 119, 6, 0.15);
+  --rose: #e11d48;
+  --rose-glow: rgba(225, 29, 72, 0.15);
+  --purple: #7c3aed;
+  --purple-glow: rgba(124, 58, 237, 0.15);
+
+  /* Fonts */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Shadows (Soft multi-layer elevation) */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 30px -4px rgba(15, 23, 42, 0.1), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+  --shadow-glow: 0 0 24px var(--primary-glow);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 9999px;
+}
+
+/* Theme Accents Presets for Light Mode */
+[data-theme="cyan"] {
+  --primary: #0284c7;
+  --primary-light: #38bdf8;
+  --primary-dark: #0369a1;
+  --primary-glow: rgba(2, 132, 199, 0.2);
+  --primary-glow-lg: rgba(2, 132, 199, 0.08);
+  --grad-primary: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+}
+
+[data-theme="emerald"] {
+  --primary: #059669;
+  --primary-light: #34d399;
+  --primary-dark: #047857;
+  --primary-glow: rgba(5, 150, 105, 0.2);
+  --primary-glow-lg: rgba(5, 150, 105, 0.08);
+  --grad-primary: linear-gradient(135deg, #059669 0%, #0284c7 100%);
+}
+
+[data-theme="amber"] {
+  --primary: #d97706;
+  --primary-light: #fbbf24;
+  --primary-dark: #b45309;
+  --primary-glow: rgba(217, 119, 6, 0.2);
+  --primary-glow-lg: rgba(217, 119, 6, 0.08);
+  --grad-primary: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+}
+
+[data-theme="purple"] {
+  --primary: #7c3aed;
+  --primary-light: #c084fc;
+  --primary-dark: #6d28d9;
+  --primary-glow: rgba(124, 58, 237, 0.2);
+  --primary-glow-lg: rgba(124, 58, 237, 0.08);
+  --grad-primary: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-darkest);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.55;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+  display: flex;
+}
+
+/* Custom Scrollbars for Light Mode */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+::selection {
+  background: rgba(79, 70, 229, 0.15);
+  color: #1e1b4b;
+}

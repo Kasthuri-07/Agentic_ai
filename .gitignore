@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Python Virtual Environments
+venv/
+backend/venv/
+.venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Local Database & Storage
+*.db
+backend/*.db
+backend/chat_history.db
+
+# Build outputs
+dist/
+frontend/dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Environment files
+.env
+.env.local
+*.env
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
